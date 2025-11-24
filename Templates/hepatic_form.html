@@ -60,6 +60,10 @@
       background: #fed7cc;
       color: var(--accent);
     }
+    .pill.success {
+      background: #d1fae5;
+      color: #166534;
+    }
     .alert {
       padding: 14px 16px;
       border-radius: 12px;
@@ -244,7 +248,7 @@
       {% if result %}
         <div class="card result">
           <h2>Resultado Obtenido</h2>
-          <p class="pill">
+          <p class="pill {% if result['prediction'] == '2' %}success{% endif %}">
             Predicción: {{ result["prediction"] }}
             ({{ result["prediction_label"]|default("Desconocido") }})
           </p>
