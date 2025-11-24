@@ -50,8 +50,8 @@ BINARY_YES_VALUE = 1
 BINARY_NO_VALUE = 2
 
 PREDICTION_LABELS = {
-    "1": "Muere",
-    "2": "Vive",
+    "1": "Fallece",
+    "2": "Supervive",
 }
 
 
@@ -59,7 +59,7 @@ class ArtifactLoadError(Exception):
     """Raised when model artifacts are not available."""
 
 
-class HepatitisPredictor:
+class PredictorHepatico:
     """Loads hepatitis model artifacts and serves predictions."""
 
     def __init__(self) -> None:
